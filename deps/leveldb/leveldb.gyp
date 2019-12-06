@@ -40,8 +40,8 @@
         ],
         "sources": [
           "port-libuv/port_uv.cc",
-          "port-libuv/env_win.cc",
-          "port-libuv/win_logger.cc"
+          "leveldb/util/env_win.cc",
+          "leveldb/util/win_logger.cc"
         ],
         "msvs_settings": {
           "VCCLCompilerTool": {
@@ -55,13 +55,7 @@
         "sources": [
           "leveldb/port/port_posix.cc",
           "leveldb/port/port_posix.h",
-          "leveldb/util/env_posix.cc",
-          "leveldb/port/port_win.cc",
-          "leveldb/port/port_win.h",
-          "leveldb/util/env_win.cc",
-          "leveldb/util/Filepath.h",
-          "leveldb/util/win_logger.cc",
-          "leveldb/util/win_logger.h"
+          "leveldb/util/env_posix.cc"
         ],
         "defines": [
           "LEVELDB_PLATFORM_POSIX=1"
