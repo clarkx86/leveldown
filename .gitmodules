@@ -4,3 +4,6 @@
 [submodule "deps/zlib"]
 	path = deps/zlib
 	url = https://github.com/clarkx86/zlib-gyp
+[submodule "deps/leveldb/leveldb"]
+	path = deps/leveldb/leveldb
+	url = https://github.com/pmmp/leveldb-mcpe
