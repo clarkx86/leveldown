@@ -30,9 +30,6 @@
             "include_dirs": [ "leveldb/port/win" ]
           }]
         ],
-        "include_dirs": [
-          "port-libuv/"
-        ],
         "defines": [
           "LEVELDB_PLATFORM_UV=1",
           "NOMINMAX=1",
