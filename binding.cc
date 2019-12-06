@@ -12,6 +12,8 @@
 #include <map>
 #include <vector>
 
+#include <leveldb/zlib_compressor.h>
+
 /**
  * Forward declarations.
  */
@@ -765,9 +767,8 @@ struct OpenWorker final : public BaseWorker {
     options_.filter_policy = database->filterPolicy_;
     options_.create_if_missing = createIfMissing;
     options_.error_if_exists = errorIfExists;
-    options_.compression = compression
-      ? leveldb::kSnappyCompression
-      : leveldb::kNoCompression;
+    options_.compressors[0] = new leveldb::ZlibCompressorRaw(-1);
+    options_.compressors[1] = new leveldb::ZlibCompressor();
     options_.write_buffer_size = writeBufferSize;
     options_.block_size = blockSize;
     options_.max_open_files = maxOpenFiles;

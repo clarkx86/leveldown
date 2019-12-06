@@ -4,7 +4,8 @@
     "conditions": [
       ["OS == 'win'", {
         "defines": [
-          "_HAS_EXCEPTIONS=0"
+          "_HAS_EXCEPTIONS=0",
+          "DLLX="
         ],
         "msvs_settings": {
           "VCCLCompilerTool": {
@@ -16,6 +17,9 @@
         }
       }],
       ["OS == 'linux'", {
+        "defines": [
+          "DLLX="
+        ],
         "cflags": [],
         "cflags!": [ "-fno-tree-vrp"]
       }],

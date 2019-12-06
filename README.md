@@ -1,4 +1,14 @@
 # leveldown
+This is a fork of [leveldown](https://github.com/Level/leveldown) with replaced LevelDB dependency to use [Mojang's Fork](https://github.com/Mojang/leveldb-mcpe) of LevelDB which uses zlib instead of snappy for compression.
+
+Thanks **a lot** to @ralphtheninja, @vweevers and @uvwxy!
+
+## Installation
+`npm install clarkx86/leveldown`
+
+<details><summary>Click to expand original readme</summary>
+  
+# leveldown
 
 [![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/leveldown.svg?label=&logo=npm)](https://www.npmjs.com/package/leveldown)
@@ -479,3 +489,4 @@ To sustain [`Level`](https://github.com/Level) and its activities, become a back
 _`leveldown` builds on the excellent work of the LevelDB and Snappy teams from Google and additional contributors. LevelDB and Snappy are both issued under the [New BSD License](http://opensource.org/licenses/BSD-3-Clause). A large portion of `leveldown` Windows support comes from the [Windows LevelDB port](http://code.google.com/r/kkowalczyk-leveldb/) (archived) by [Krzysztof Kowalczyk](http://blog.kowalczyk.info/) ([`@kjk`](https://twitter.com/kjk)). If you're using `leveldown` on Windows, you should give him your thanks!_
 
 [level-badge]: https://leveljs.org/img/badge.svg
+</details>
