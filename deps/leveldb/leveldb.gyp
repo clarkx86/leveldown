@@ -39,7 +39,7 @@
           "_HAS_EXCEPTIONS=0"
         ],
         "sources": [
-          "port-libuv/port_uv.cc",
+          "leveldb/port/port_win.cc",
           "leveldb/util/env_win.cc",
           "leveldb/util/win_logger.cc"
         ],
@@ -274,7 +274,6 @@
       "leveldb/include/leveldb/zlib_compressor.h",
       "leveldb/include/leveldb/zopfli_compressor.h",
       "leveldb/include/leveldb/zstd_compressor.h",
-      "leveldb/util/env_boost.cc"
     ]
   }]
 }
