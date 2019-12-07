@@ -17,6 +17,8 @@
 #include "iterator.h"
 #include "common.h"
 
+#include <leveldb/zlib_compressor.h>
+
 namespace leveldown {
 
 static Nan::Persistent<v8::FunctionTemplate> database_constructor;
@@ -184,7 +186,6 @@ NAN_METHOD(Database::Open) {
 
   bool createIfMissing = BooleanOptionValue(optionsObj, "createIfMissing", true);
   bool errorIfExists = BooleanOptionValue(optionsObj, "errorIfExists");
-  bool compression = BooleanOptionValue(optionsObj, "compression", true);
 
   uint32_t cacheSize = UInt32OptionValue(optionsObj, "cacheSize", 8 << 20);
   uint32_t writeBufferSize = UInt32OptionValue(
@@ -211,7 +212,7 @@ NAN_METHOD(Database::Open) {
     , database->filterPolicy
     , createIfMissing
     , errorIfExists
-    , compression
+    , new leveldb::ZlibCompressorRaw(-1)
     , writeBufferSize
     , blockSize
     , maxOpenFiles
